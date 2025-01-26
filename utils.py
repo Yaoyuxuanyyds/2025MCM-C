@@ -43,9 +43,7 @@ class WeightOptimizer(nn.Module):
         return total_loss / (T - Start)
 
 
-
-
-def smooth_distribution(A, B, smooth_factor=0.1, reduce_factor=0.1):
+def smooth_distribution(A, B, smooth_factor=0.1, reduce_factor=0.05):
     """
     改进的平滑函数。
 
@@ -88,7 +86,6 @@ def smooth_distribution(A, B, smooth_factor=0.1, reduce_factor=0.1):
 
 
 # 统计结果
-event_diff = 10
 name_to_noc = {
     "Afghanistan": "AFG", "Albania": "ALB", "Algeria": "ALG", "Argentina": "ARG", "Armenia": "ARM",
     "Australasia": "ANZ", "Australia": "AUS", "Austria": "AUT", "Azerbaijan": "AZE", "Bahamas": "BAH",
